@@ -25,6 +25,7 @@ jobs:
         with:
           path: build
 
+      # -- BUILD PDF FILE --#
       - name: Install Prince
         run: |
           curl https://www.princexml.com/download/prince-14.2-linux-generic-x86_64.tar.gz -O
@@ -39,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: result
-          path: pdf/neRead_Manual.pdf
+          path: pdf/OneRead_Manual.pdf
           if-no-files-found: error
 
   deploy:
