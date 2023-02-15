@@ -25,22 +25,22 @@ jobs:
         with:
           path: build
 
-    - name: Install Prince
-      run: |
-        curl https://www.princexml.com/download/prince-14.2-linux-generic-x86_64.tar.gz -O
-        tar zxf prince-14.2-linux-generic-x86_64.tar.gz
-        cd prince-14.2-linux-generic-x86_64
-        yes "" | sudo ./install.sh
+      - name: Install Prince
+        run: |
+          curl https://www.princexml.com/download/prince-14.2-linux-generic-x86_64.tar.gz -O
+          tar zxf prince-14.2-linux-generic-x86_64.tar.gz
+          cd prince-14.2-linux-generic-x86_64
+          yes "" | sudo ./install.sh
 
-    - name: Build PDF
-      run: npx docusaurus-prince-pdf -u https://crop-llc.github.io/OneRead-docs/ --output OneRead_Manual.pdf
+      - name: Build PDF
+        run: npx docusaurus-prince-pdf -u https://crop-llc.github.io/OneRead-docs/ --output OneRead_Manual.pdf
 
-    - name: Upload results
-      uses: actions/upload-artifact@v3
-      with:
-        name: result
-        path: pdf/neRead_Manual.pdf
-        if-no-files-found: error
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: result
+          path: pdf/neRead_Manual.pdf
+          if-no-files-found: error
 
   deploy:
     name: Deploy to GitHub Pages
