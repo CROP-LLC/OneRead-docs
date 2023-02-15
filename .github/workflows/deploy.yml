@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: result
-          path: ./pdf/OneRead_Manual.pdf
+          path: OneRead_Manual.pdf
           if-no-files-found: error
 
   deploy:
