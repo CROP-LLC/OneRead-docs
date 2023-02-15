@@ -71,6 +71,11 @@ const config = {
             label: '説明書',
           },
           {
+            href: 'ttps://oneread.jp/',
+            label: '公式サイト',
+            position: 'right',
+          },
+          {
             href: 'https://uhaip.com/',
             label: 'ログイン',
             position: 'right',
@@ -89,7 +94,20 @@ const config = {
               },
               {
                 label: '動画で見る',
-                to: 'https://www.youtube.com/@oneread',
+                to: 'https://youtube.com/playlist?list=PL8z5R-_9Y5Mr9Zbk6HLJLXA91BubV5uTb',
+              },
+            ],
+          },
+          {
+            title: 'SNS',
+            items: [
+              {
+                label: 'Youtube',
+                href: 'https://youtube.com/@oneread',
+              },
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com/groups/526628375019694',
               },
             ],
           },
@@ -104,10 +122,14 @@ const config = {
                 label: 'ログイン',
                 href: 'https://uhaip.com/',
               },
+              {
+                label: '合同会社CROP',
+                href: 'https://crop-cc.info/company/',
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Crop llc. All rights reserved.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CROP llc. All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
